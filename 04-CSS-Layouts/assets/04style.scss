@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  font-family: sans-serif;
+}
+
+.product {
+  width: 825px;
+  margin: 50px auto;
+}
+
+article {
+  border: 5px solid black;
+}
+
+h2,
+h3,
+button {
+  text-transform: uppercase;
+}
+
+h2::before {
+  content: 'SALE';
+  position: absolute;
+  top: -15px;
+  left: -25px;
+  color: white;
+  background-color: red;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  display: inline-block;
+  padding: 5px 15px;
+}
+
+h2 {
+  position: relative;
+  font-size: 1.25rem;
+  padding: 15px 0;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+header {
+  text-align: center;
+  background-color: #f7f7f7;
+  font-weight: bold;
+}
+
+strong {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+
+.shipping {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75rem;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+p,
+a {
+  font-size: 0.75rem;
+}
+
+.description {
+  margin-bottom: 5px;
+}
+
+a:link,
+a:visited {
+  display: inline-block;
+  color: black;
+  margin-bottom: 20px;
+}
+
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.details {
+  list-style: square;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 15px 0;
+  font-size: 1.1rem;
+  color: white;
+  border: none;
+  background: black;
+}
+
+button:hover {
+  color: black;
+  border-top: 5px solid black;
+  background-color: white;
+}
+
+.color-picker li {
+  list-style: none;
+  display: inline-block;
+  padding: 10px 10px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.color-picker li:nth-child(1) {
+  background-color: black;
+}
+.color-picker li:nth-child(2) {
+  background-color: orangered;
+}
+.color-picker li:nth-child(3) {
+  background-color: greenyellow;
+}
+.color-picker li:nth-child(4) {
+  background-color: brown;
+}
+.color-picker li:nth-child(5) {
+  background-color: violet;
+}
+.color-picker li:nth-child(6) {
+  background-color: coral;
+  margin-right: 0;
+}
+
+.shipping {
+  float: right;
+  margin-top: 8px;
+}
+
+.price {
+  float: left;
+}
+
+.description {
+  clear: both;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-info {
+  width: 240px;
+  float: left;
+  padding-top: 20px;
+  margin-right: 40px;
+}
+
+.product-details {
+  width: 240px;
+  float: left;
+}
+
+.product-img {
+  width: 250px;
+  height: 250px;
+  float: left;
+  margin-right: 40px;
+}

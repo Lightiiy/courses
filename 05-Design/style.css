@@ -75,6 +75,7 @@ h1 {
   font-size: 44px;
   line-height: 0.9;
   letter-spacing: -1px;
+  /* text-shadow: 0 5px 5px #00000020; */
 }
 
 .header-text {
@@ -85,6 +86,7 @@ h1 {
 
 img {
   width: 100%;
+  border-radius: 12px;
 }
 
 /* FEATURES */
@@ -109,6 +111,7 @@ img {
   background-color: var(--main-color);
   padding: 24px;
   color: #fff;
+  border-radius: 12px;
 }
 
 .testimonial-box {
@@ -127,8 +130,19 @@ img {
 }
 
 /* CHAIRS */
+
+.chair {
+  box-shadow: 0 20px 20px 0 #0000000f;
+  border-radius: 12px;
+}
+.chair img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
 .chair-box {
   padding: 24px;
+  box-shadow: 0 20px 30px 0 #0000000f;
 }
 
 h3 {
@@ -178,11 +192,12 @@ footer {
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
+  border-radius: 100px;
 }
 
 .btn:hover,
 .btn:active {
-  background-color: #var(--main-lighter);
+  background-color: var(--main-lighter);
 }
 
 .btn--big {

@@ -1,0 +1,17 @@
+<a
+  href="#"
+  class="list-group-item d-flex align-items-center border m-2"
+  style="gap: 30px"
+  (click)="onSelected()">
+  <div class="p-2">
+    <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
+    <p class="list-group-item-text">{{ recipe.description }}</p>
+  </div>
+  <span class="ms-auto p-2">
+    <img
+      [src]="recipe.imagePath"
+      [alt]="recipe.name"
+      class="img-fluid"
+      style="max-height: 15rem" />
+  </span>
+</a>

@@ -11,6 +11,7 @@ import { ShoppingEditComponent } from './component/shopping/shopping-edit/shoppi
 import { RecipeItemComponent } from './component/recipe/recipe-item/recipe-item.component';
 import { RecipeDetailComponent } from './component/recipe/recipe-detail/recipe-detail.component';
 import { RecipeComponent } from './component/recipe/recipe.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { RecipeComponent } from './component/recipe/recipe.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

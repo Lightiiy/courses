@@ -1,27 +1,12 @@
-<app-recipe-item> </app-recipe-item>
 <div class="row">
   <div class="col-sm-12 m-2">
     <button class="btn btn-success">New Recipe</button>
   </div>
-  <hr />
   <div class="col-sm-12">
-    <a
-      href="#"
-      class="list-group-item d-flex align-items-center border m-2"
-      style="gap: 30px"
-      *ngFor="let recipe of recipes">
-      <div class="p-2">
-        <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-        <p class="list-group-item-text">{{ recipe.description }}</p>
-      </div>
-      <span class="ms-auto p-2">
-        <img
-          [src]="recipe.imagePath"
-          [alt]="recipe.name"
-          class="img-fluid"
-          style="max-height: 15rem" />
-      </span>
-    </a>
-    <app-recipe-item></app-recipe-item>
+    <app-recipe-item
+      *ngFor="let recipeEl of recipes"
+      [recipe]="recipeEl"
+      (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item>
+    <hr />
   </div>
 </div>

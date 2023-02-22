@@ -1,10 +1,10 @@
 import { Element } from '@angular/compiler';
-import { AfterViewInit, Directive, ElementRef, HostBinding, HostListener, Renderer2, ViewChild } from '@angular/core';
+import { Directive, ElementRef, HostListener,} from '@angular/core';
 
 @Directive({
   selector: '[appDropdown]'
 })
-export class DropdownDirective implements AfterViewInit{
+export class DropdownDirective{
 
  parentTag: ElementRef;
 
@@ -24,6 +24,4 @@ export class DropdownDirective implements AfterViewInit{
     this.parentTag = elem;
    }
 
-   ngAfterViewInit(): void {
-    }
 }

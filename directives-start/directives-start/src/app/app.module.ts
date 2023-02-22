@@ -4,10 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { BasicHiglightDirective } from 'src/assets/basic-hilgiht.directive';
+import { BetterHiglightDirective } from '../assets/better-higlight.directive';
+import { UnlessDirective } from '../assets/unless.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BasicHiglightDirective,
+    BetterHiglightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

@@ -14,20 +14,6 @@
 </div>
 <div>
   <div class="col">
-    <!-- <div class="dropdown show">
-      <button
-        type="button"
-        class="btn btn-secondary dropdown-toggle"
-        id="dropdownMenuButton"
-        data-toggle="dropdown">
-        Manage Recipe <span class="caret"></span>
-      </button>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">To Shopping List</a>
-        <a class="dropdown-item" href="#">Edit Recipe</a>
-        <a class="dropdown-item" href="#">Delete Recipe</a>
-      </div>
-    </div> -->
     <div appDropdown class="dropdown">
       <button
         type="button"
@@ -35,19 +21,25 @@
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false">
-        Dropdown button
+        Manage Recipe
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>
-        <a class="dropdown-item" href="#">Something else here</a>
+        <a class="dropdown-item" (click)="onAddToShoppingList()"
+          >To Shopping list</a
+        >
+        <a class="dropdown-item" href="#">Edit recipe</a>
+        <a class="dropdown-item" href="#">Delete Recipe</a>
       </div>
     </div>
   </div>
 </div>
 <div>
-  <div class="col">{{ recipe.description }}</div>
+  <div class="col">{{ recipe.desc }}</div>
 </div>
 <div>
-  <div class="col">Ingredients</div>
+  <div class="col">
+    <ul *ngFor="let ingredient of recipe.ingredients">
+      <li>{{ ingredient.name }} - ( {{ ingredient.amount }} )</li>
+    </ul>
+  </div>
 </div>

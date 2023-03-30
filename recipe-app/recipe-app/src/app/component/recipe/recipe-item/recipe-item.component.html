@@ -1,8 +1,9 @@
 <a
-  href="#"
+  style="cursor: pointer"
+  [routerLink]="['/recipes', this.index]"
+  routerLinkActive="active"
   class="list-group-item d-flex align-items-center border m-2"
-  style="gap: 30px"
-  (click)="onSelected()">
+  style="gap: 30px">
   <div class="p-2">
     <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
     <p class="list-group-item-text">{{ recipe.desc }}</p>

@@ -1,22 +1,48 @@
 <div class="row">
   <div class="col">
-    <form>
+    <form (ngSubmit)="onSubmit(shoppingForm)" #shoppingForm="ngForm">
       <div class="row m-2">
         <div class="col-sm-5 form-group">
           <label for="name">Name</label>
-          <input type="text" id="name" class="form-control" #nameInput />
+          <input
+            type="text"
+            id="name"
+            class="form-control"
+            #nameInput
+            ngModel
+            name="nameForm"
+            required />
         </div>
         <div class="col-sm-2 form-group">
           <label for="amount">Amount</label>
-          <input type="number" id="amount" class="form-control" #amountInput />
+          <input
+            type="number"
+            id="amount"
+            class="form-control"
+            #amountInput
+            ngModel
+            name="amountForm"
+            required
+            pattern="^[1-9]+[0-9]*$" />
         </div>
       </div>
       <div class="form-group m-2">
-        <button class="btn btn-success m-2" (click)="onAddItem()" type="submit">
-          Add
+        <button
+          class="btn btn-success m-2"
+          type="submit"
+          [disabled]="!shoppingForm.valid">
+          {{ editMode ? 'Edit' : 'Add' }}
         </button>
-        <button class="btn btn-danger m-2" type="submit">Remove</button>
-        <button class="btn btn-primary m-2" type="submit">Clear</button>
+        <button
+          *ngIf="editMode"
+          class="btn btn-danger m-2"
+          type="button"
+          (click)="onRemove()">
+          Remove
+        </button>
+        <button class="btn btn-primary m-2" type="button" (click)="onClear()">
+          Clear
+        </button>
       </div>
     </form>
   </div>

@@ -5,8 +5,9 @@
       <a
         class="list-group-item"
         style="cursor: pointer"
-        *ngFor="let ingredient of ingredients">
-        <div>{{ ingredient.name }} ({{ ingredient.amount }})</div>
+        *ngFor="let ingredient of ingredients; let i = index"
+        (click)="onEditItem(i)">
+        {{ ingredient.name }} ({{ ingredient.amount }})
       </a>
     </ul>
   </div>

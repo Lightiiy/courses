@@ -2,12 +2,16 @@ import { EventEmitter, Injectable } from "@angular/core";
 import { Ingredient } from "../model/ingredient.model";
 import { Recipe } from "../model/recipe.model";
 import { ShoppingListService } from "./shopping-list.service";
+import { RecipeEditComponent } from "src/app/component/recipe/recipe-edit/recipe-edit.component";
+import { Subject } from "rxjs";
 
 
 @Injectable()
 export class RecipeService {
 
    recipeSelected = new EventEmitter<Recipe>();
+
+   recipesChanged = new Subject<Recipe[]>();
 
   private recipes: Recipe[] = [
     new Recipe('Bolgonese Pasta',
@@ -30,6 +34,17 @@ export class RecipeService {
 
   getRecipe(id: number){
     return this.recipes[id];
+  }
+
+  addRecipe(recipe: Recipe){
+    this.recipes.push(recipe);
+    this.recipesChanged.next(this.recipes.slice());
+  }
+
+  updateRecipe(index: number, newRecipe: Recipe){
+    this.recipes[index] = newRecipe;
+    this.recipesChanged.next(this.recipes.slice());
+
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]){
